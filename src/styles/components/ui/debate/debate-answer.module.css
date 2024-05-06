@@ -1,0 +1,50 @@
+.debate_answer {
+  width: 360px;
+  padding-top: 17px;
+  transform: rotateX(180deg);
+}
+
+.debate_answer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.debate_answer__container__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 360px;
+  width: 360px;
+  background: #21252933;
+}
+
+.debate_answer__container__info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.debate_answer__container__info h4 {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.debate_answer__container__info h5 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@media screen and (max-width: 760px) {
+  .debate_answer {
+    width: 100%;
+  }
+
+  .debate_answer__container {
+    align-items: center;
+    justify-content: center;
+  }
+}

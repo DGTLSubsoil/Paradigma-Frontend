@@ -1,0 +1,121 @@
+.topic_items {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.topic_items__container {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.topic_items__container__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.topic_items__container__info h1 {
+  font-size: 60px;
+  line-height: 84px;
+}
+
+.topic_items__container__debates {
+  display: flex;
+  /* justify-content: center; */
+  overflow-x: scroll;
+  gap: 20px;
+  max-width: 1300px;
+  width: 100%;
+  transform: rotateX(180deg);
+}
+
+.topic_items__container__debates::-webkit-scrollbar {
+  height: 5px;
+}
+
+.topic_items__container__debates__debate {
+  display: flex;
+  flex-direction: column;
+  padding-top: 17px;
+  gap: 19px;
+  min-width: 300px;
+  max-width: 300px;
+  transform: rotateX(180deg);
+}
+
+.topic_items__container__debates__debate__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.topic_items__container__debates__debate__text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.topic_items__container__debates__debate__text h4 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.mobile {
+  display: none;
+
+  transition: all 0.3s ease;
+}
+
+.pc {
+  display: block;
+
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+  .topic_items__container {
+    gap: 10px;
+  }
+
+  .topic_items__container__info h1 {
+    font-size: 56px;
+    line-height: 78px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .topic_items__container__info h1 {
+    font-size: 52px;
+    line-height: 72px;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .topic_items__container__info h1 {
+    font-size: 46px;
+    line-height: 64px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .topic_items__container__info h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+}

@@ -1,0 +1,50 @@
+.grey__button {
+  position: relative;
+  width: 200px;
+  height: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px 8px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.grey__button:hover {
+  color: #fff;
+  background: rgb(33, 37, 41);
+}
+
+.grey__button__cubes {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  z-index: 1;
+  transition: filter 0.3s ease;
+}
+
+.grey__button__text {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark {
+  background: rgb(33, 37, 41);
+}
+
+.dark:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 480px) {
+  .mobile_width {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,131 @@
+.debates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 160px;
+  /* height: 100vh; */
+}
+
+.debates__container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  gap: 60px;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 70px 105px 70px;
+
+  transition: all 0.3s ease;
+}
+
+.debates__container__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.debates__container__description__info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 592px;
+}
+
+.debates__container__description__info__text {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.debates__container__description__info__text h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 84px;
+
+  transition: all 0.3s ease;
+}
+
+.debates__container__description__info__text h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  max-width: 528px;
+
+  transition: all 0.3s ease;
+}
+
+.debates__container__description__info__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.debates__container__description__image {
+  width: 640px;
+  height: 480px;
+  background: rgba(255, 255, 255, 0.2);
+
+  transition: all 0.3s ease;
+}
+
+.pc {
+  display: block;
+}
+
+@media screen and (max-width: 960px) {
+  .debates__container {
+    padding: 0 40px 105px 40px;
+  }
+
+  .debates__container__description__info__text h1 {
+    font-size: 56px;
+    line-height: 78px;
+  }
+
+  .pc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .debates__container {
+    padding: 0 30px 105px 30px;
+  }
+
+  .debates__container__description__info__text h1 {
+    font-size: 52px;
+    line-height: 72px;
+  }
+
+  .debates__container__description__info__text h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .debates__container {
+    padding: 0 20px 105px 20px;
+  }
+
+  .debates__container__description__info__text h1 {
+    font-size: 46px;
+    line-height: 64px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .debates__container {
+    padding: 0 15px 105px 15px;
+  }
+
+  .debates__container__description__info__text h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+}

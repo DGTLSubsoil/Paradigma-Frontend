@@ -1,0 +1,45 @@
+.connect__button {
+  position: relative;
+  min-width: 30px;
+  /* max-width: 217px; */
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0px;
+  padding: 13px 23px 13px 23px;
+}
+
+.connect__button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  transition: border 300ms;
+}
+
+.connect__button:hover:before {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.connect__button__cubes {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  z-index: 1;
+}
+
+.connect__button__text {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}

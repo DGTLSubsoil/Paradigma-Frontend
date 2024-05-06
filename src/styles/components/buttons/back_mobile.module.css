@@ -1,0 +1,19 @@
+.back_mobile__button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 110px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  transition: background-color 300ms;
+}
+
+.back_mobile__button__text {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}

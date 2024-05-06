@@ -1,0 +1,710 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_PARADContract",
+        "type": "address"
+      },
+      { "internalType": "address", "name": "_sporeNFT", "type": "address" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "previousAdminRole",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "newAdminRole",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "PARAD",
+    "outputs": [
+      { "internalType": "contract IERC20", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "SporeNFT",
+    "outputs": [
+      { "internalType": "contract ISporeNFT", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "TOKEN_RECEIVER_ROLE",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_user", "type": "address" },
+      { "internalType": "uint256[2]", "name": "_dispute", "type": "uint256[2]" }
+    ],
+    "name": "addUserActiveDispute",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_user", "type": "address" },
+      {
+        "internalType": "uint256[2]",
+        "name": "_volumeIncome",
+        "type": "uint256[2]"
+      }
+    ],
+    "name": "addVolumeIncomeRefs",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "adminWallet",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_groupID", "type": "uint256" },
+      { "internalType": "uint256", "name": "_index", "type": "uint256" },
+      {
+        "internalType": "uint8",
+        "name": "_indexPositionAnswer",
+        "type": "uint8"
+      },
+      { "internalType": "uint256", "name": "_nftPrice", "type": "uint256" },
+      { "internalType": "address", "name": "_refferer", "type": "address" }
+    ],
+    "name": "buyNftInDispute",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "number", "type": "uint256" }
+    ],
+    "name": "checkAndPush",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "groupId", "type": "uint256" },
+      {
+        "internalType": "enum Spore.Status",
+        "name": "status",
+        "type": "uint8"
+      },
+      { "internalType": "string", "name": "point", "type": "string" },
+      { "internalType": "uint256", "name": "qtyMembers", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "needQtyMembers",
+        "type": "uint256"
+      },
+      { "internalType": "uint256", "name": "prizePool", "type": "uint256" },
+      { "internalType": "uint256", "name": "qtyAnswers", "type": "uint256" }
+    ],
+    "name": "createDispute",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "", "type": "uint256" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "disputes",
+    "outputs": [
+      {
+        "internalType": "enum Spore.Status",
+        "name": "status",
+        "type": "uint8"
+      },
+      { "internalType": "bool", "name": "isHot", "type": "bool" },
+      { "internalType": "string", "name": "point", "type": "string" },
+      { "internalType": "uint256", "name": "qtyMembers", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "needQtyMembers",
+        "type": "uint256"
+      },
+      { "internalType": "uint256", "name": "qtyAnswers", "type": "uint256" },
+      { "internalType": "uint256", "name": "prizePool", "type": "uint256" },
+      { "internalType": "string", "name": "URI", "type": "string" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_user", "type": "address" }
+    ],
+    "name": "getActiveDisputesForUser",
+    "outputs": [
+      { "internalType": "uint256[2][]", "name": "", "type": "uint256[2][]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "groupId", "type": "uint256" }
+    ],
+    "name": "getBulkIsHot",
+    "outputs": [
+      { "internalType": "uint256[]", "name": "", "type": "uint256[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_user", "type": "address" }
+    ],
+    "name": "getComplexRefInfoForUser",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "listOfRefs",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "totalVolume",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "totalIncome",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "groupId", "type": "uint256" },
+      { "internalType": "uint256", "name": "index", "type": "uint256" }
+    ],
+    "name": "getDispute",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum Spore.Status",
+            "name": "status",
+            "type": "uint8"
+          },
+          { "internalType": "bool", "name": "isHot", "type": "bool" },
+          { "internalType": "string", "name": "point", "type": "string" },
+          {
+            "internalType": "address[]",
+            "name": "members",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "memberShares",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint8[]",
+            "name": "memberChoices",
+            "type": "uint8[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "qtyMembers",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "needQtyMembers",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "qtyAnswers",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "pointScores",
+            "type": "uint256[]"
+          },
+          { "internalType": "uint256", "name": "prizePool", "type": "uint256" },
+          { "internalType": "string", "name": "URI", "type": "string" }
+        ],
+        "internalType": "struct Spore.Dispute",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_disputeId", "type": "uint256" }
+    ],
+    "name": "getDisputes",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum Spore.Status",
+            "name": "status",
+            "type": "uint8"
+          },
+          { "internalType": "bool", "name": "isHot", "type": "bool" },
+          { "internalType": "string", "name": "point", "type": "string" },
+          {
+            "internalType": "address[]",
+            "name": "members",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "memberShares",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint8[]",
+            "name": "memberChoices",
+            "type": "uint8[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "qtyMembers",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "needQtyMembers",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "qtyAnswers",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "pointScores",
+            "type": "uint256[]"
+          },
+          { "internalType": "uint256", "name": "prizePool", "type": "uint256" },
+          { "internalType": "string", "name": "URI", "type": "string" }
+        ],
+        "internalType": "struct Spore.Dispute[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256[]", "name": "array", "type": "uint256[]" }
+    ],
+    "name": "getMaxValueIndex",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_groupId", "type": "uint256" },
+      { "internalType": "uint256", "name": "_index", "type": "uint256" },
+      { "internalType": "address", "name": "_member", "type": "address" },
+      {
+        "internalType": "uint256",
+        "name": "_indexPositionAnswer",
+        "type": "uint256"
+      }
+    ],
+    "name": "getMemberShareInDisputeByChoice",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_groupId", "type": "uint256" },
+      { "internalType": "uint256", "name": "_index", "type": "uint256" },
+      { "internalType": "address", "name": "_member", "type": "address" }
+    ],
+    "name": "getTotalMemberShareInDispute",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_user", "type": "address" }
+    ],
+    "name": "getTotalVolumeIncomeRefs",
+    "outputs": [
+      { "internalType": "uint256[]", "name": "", "type": "uint256[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_groupId", "type": "uint256" },
+      { "internalType": "uint256", "name": "_index", "type": "uint256" }
+    ],
+    "name": "getUriForDispute",
+    "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "groupIdKeys",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
+    ],
+    "name": "hasRole",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_groupID", "type": "uint256" },
+      { "internalType": "uint256", "name": "_index", "type": "uint256" },
+      { "internalType": "address", "name": "_user", "type": "address" }
+    ],
+    "name": "isUserInDispute",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "numOfActiveDisputesForUser",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "readGroupIdKeys",
+    "outputs": [
+      { "internalType": "uint256[]", "name": "", "type": "uint256[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "tokenAddress", "type": "address" },
+      { "internalType": "uint256", "name": "amount", "type": "uint256" }
+    ],
+    "name": "receiveERC20",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "refNumBuys",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "reffererForUser",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_user", "type": "address" },
+      {
+        "internalType": "uint256[2]",
+        "name": "_debateCoordinates",
+        "type": "uint256[2]"
+      }
+    ],
+    "name": "removeFromUserActiveDisputes",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "groupId", "type": "uint256" },
+      { "internalType": "uint256", "name": "index", "type": "uint256" },
+      { "internalType": "string", "name": "newpoint", "type": "string" }
+    ],
+    "name": "setDisputePoint",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_groupId", "type": "uint256" },
+      { "internalType": "uint256", "name": "_indexDispute", "type": "uint256" },
+      { "internalType": "bool", "name": "_value", "type": "bool" }
+    ],
+    "name": "setIsHotDispute",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_PARADContract", "type": "address" }
+    ],
+    "name": "setPARADContract",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_value", "type": "uint256" }
+    ],
+    "name": "setRefValue",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_sporeNFT", "type": "address" }
+    ],
+    "name": "setSporeNFT",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_groupId", "type": "uint256" },
+      { "internalType": "uint256", "name": "_indexDispute", "type": "uint256" },
+      {
+        "internalType": "enum Spore.Status",
+        "name": "_status",
+        "type": "uint8"
+      }
+    ],
+    "name": "setStatusDispute",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes4", "name": "interfaceId", "type": "bytes4" }
+    ],
+    "name": "supportsInterface",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_value", "type": "uint256" }
+    ],
+    "name": "transferPARADFromUserToContract",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_groupId", "type": "uint256" },
+      { "internalType": "uint256", "name": "_index", "type": "uint256" },
+      { "internalType": "string", "name": "_newURI", "type": "string" }
+    ],
+    "name": "updateUriForDispute",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "userActiveDisputes",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "userRefsList",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "volumeIncomeRefs",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+    ],
+    "name": "withdrawPARAD",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
