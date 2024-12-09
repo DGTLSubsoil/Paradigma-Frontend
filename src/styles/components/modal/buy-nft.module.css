@@ -1,0 +1,76 @@
+.buynft_modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    z-index: 1000;
+}
+
+.buynft_modal::-webkit-scrollbar-track {
+    margin-top: 0 !important;
+}
+
+.buynft_modal__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 22.5px 0;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    min-width: 260px;
+    background: #212529;
+}
+
+.buynft_modal__container__close {
+    position: absolute;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    line-height: 12px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    padding: 8px;
+    background: #212529;
+    border-radius: 150px;
+}
+
+.buynft_modal__container__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buynft_modal__container__form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.buynft_modal__container__form__group h2 {
+    color: #fff;
+    font-size: 18px;
+}
+
+.buynft_modal__container__form__group input {
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    /* font-family: var(--var-bakbak-one); */
+}
+
+.buynft_modal__container__form__group input:focus {
+    outline: none;
+    border-color: #fff;
+}

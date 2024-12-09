@@ -1,0 +1,112 @@
+.account_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.account_info__head {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  width: 100%; /* Dark */
+  background: rgb(33, 37, 41);
+}
+
+.account_info__container {
+  display: flex;
+  padding: 50px 70px 105px 70px;
+  width: 100%;
+
+  transition: all 0.3s ease;
+}
+
+.account_info__container__button {
+  height: 50px;
+}
+
+.account_info__container__data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  transition: all 0.3s ease;
+}
+
+.account_info__container__data h4 {
+  font-size: 18px;
+  line-height: 25px;
+  transition: all 0.3s ease;
+}
+
+.account_info__container__data h2 {
+  font-size: 32px;
+  line-height: 46px;
+  transition: all 0.3s ease;
+}
+
+.account_info__container__data h1 {
+  font-size: 42px;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.flex__space_between {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .account_info__container {
+    padding: 50px 40px 105px 40px;
+  }
+
+  .account_info__container__data h4 {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .account_info__container__data h2 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .account_info__container {
+    padding: 0 30px 105px 30px;
+  }
+
+  .account_info__container__data h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .account_info__container__data h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .account_info__container__data h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .account_info__container {
+    padding: 0 20px 105px 20px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .account_info__container {
+    padding: 0 15px 105px 15px;
+  }
+}

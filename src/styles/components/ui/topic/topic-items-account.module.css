@@ -1,0 +1,222 @@
+.topic_items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* justify-content: center; */
+  width: 100%;
+  /* flex: 1 1 calc(24% - 10px);
+  max-width: calc(24% - 10px);
+  min-width: 162px; */
+  /* aspect-ratio: 1 / 1; */
+
+  cursor: pointer;
+  /* padding: 10px; */
+  z-index: 1;
+}
+
+
+.topic_items__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 15px;
+  transition: all 0.3s ease;
+}
+
+.topic_items__container__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  min-height: 306px;
+  object-fit: cover;
+}
+
+.topic_items__container__info {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.topic_items__container__info__debates {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  /* max-width: 50%; */
+  padding: 8px 12px;
+  background: rgb(102, 16, 242);
+}
+
+.topic_items__container__info__debates span {
+  display: flex;
+  gap: 4.7px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.topic_items__container__info__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.topic_items__container__info__text h4 {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.topic_items__container__info__text span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.topic_items__container__info h1 {
+  font-size: 60px;
+  line-height: 84px;
+}
+
+.topic_items__container__debates {
+  display: flex;
+  /* justify-content: center; */
+  overflow: hidden;
+  overflow-x: scroll;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1300px;
+  width: 100%;
+  transform: rotateX(180deg);
+}
+
+.topic_items__container__debates::-webkit-scrollbar {
+  height: 5px;
+}
+
+.topic_items__container__debates__not_found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* height: 300px; */
+  /* background: rgba(255, 255, 255, 0.2); */
+  padding-top: 17px;
+  transform: rotateX(180deg);
+}
+
+.topic_items__container__debates__debate {
+  display: flex;
+  flex-direction: column;
+  padding-top: 17px;
+  gap: 19px;
+  min-width: 300px;
+  max-width: 300px;
+  transform: rotateX(180deg);
+}
+
+.topic_items__container__debates__debate__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.topic_items__container__debates__debate__text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  top: 0;
+}
+
+.topic_items__container__debates__debate__text h4 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.mobile {
+  display: none;
+
+  transition: all 0.3s ease;
+}
+
+.pc {
+  display: block;
+
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+  /* .topic_items__container {
+    height: 276px;
+    width: 276px;
+  } */
+
+  .topic_items__container__info h1 {
+    font-size: 56px;
+    line-height: 78px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  /* .topic_items__container {
+    height: 192px;
+    width: 192px;
+  } */
+
+  .topic_items__container__info h1 {
+    font-size: 52px;
+    line-height: 72px;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* .topic_items__container {
+    height: 162px;
+    width: 162px;
+  } */
+
+  .topic_items__container__info h1 {
+    font-size: 46px;
+    line-height: 64px;
+  }
+}
+
+/* @media screen and (max-width: 360px) {
+  .topic_items__container__info h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+} */

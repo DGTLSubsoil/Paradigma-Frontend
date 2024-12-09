@@ -1,0 +1,136 @@
+.debate_item {
+  display: flex;
+  /* justify-content: center; */
+  /* width: 100%; */
+
+}
+
+.debate_item__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 310px;
+  width: 310px;
+  background-color: #585858;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  z-index: 1;
+
+  transition: all 0.3s ease;
+}
+
+.debate_item__container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.91) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  z-index: 2;
+}
+
+.debate_item__container__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.debate_item__container__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 14px 13px;
+  z-index: 3;
+}
+
+.debate_item__container__info__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.debate_item__container__info__debates {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  background: rgb(236, 159, 44);
+  padding: 8px 12px;
+}
+
+.debate_item__container__info__debates span {
+  display: flex;
+  gap: 4.7px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.debate_item__container__info__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.debate_item__container__info__text__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.debate_item__container__info__text h4 {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.debate_item__container__info__text__bottom h4 {
+  color: #6610F2;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.debate_item__container__info__text span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.debate_item__container__info__text__bottom span {
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 19px;
+  letter-spacing: 0%;
+  text-align: left;
+}

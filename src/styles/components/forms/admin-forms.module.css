@@ -1,0 +1,69 @@
+.form {
+  width: 100%;
+  background-color: #212529;
+  min-width: 245px;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 10px;
+
+  transition: all 0.3s ease;
+}
+
+.form__container__form {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  transition: all 0.3s ease;
+}
+
+.form__container__form input {
+  height: 59px;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  /* font-family: var(--var-bakbak-one); */
+}
+
+.form__container__form input:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.master_form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.master_form__dispute {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #212529;
+  min-width: 245px;
+  padding: 15px;
+  gap: 10px;
+}
+
+@media screen and (max-width: 760px) {
+  .form__container__form {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .form__container {
+    align-items: center;
+  }
+
+  .form__container__form {
+    align-items: center;
+  }
+}

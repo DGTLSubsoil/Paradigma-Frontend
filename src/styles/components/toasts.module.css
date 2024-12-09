@@ -1,0 +1,16 @@
+.toast {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+  gap: 5px;
+  font-family: var(--var-bakbak-one);
+  font-weight: 400 !important;
+}
+
+.toast h4 {
+  font-size: 20px !important;
+  line-height: 20px !important;
+}

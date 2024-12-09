@@ -1,0 +1,169 @@
+.topic_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.topic_item__head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(33, 37, 41);
+  width: 100%;
+}
+
+.topic_item__head__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  padding: 10px 70px 10px 70px;
+  width: 100%;
+
+  transition: all 0.3s ease;
+}
+
+.topic_item__head__wrapper__topic {
+  text-align: left;
+  color: #6610f2;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 84px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.topic_item__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 70px 230px 70px;
+
+  transition: all 0.3s ease;
+}
+
+.topic_item__container__head h1 {
+  font-size: 60px;
+  line-height: 84px;
+
+  transition: all 0.3s ease;
+}
+
+.topic_item__container__debates {
+  transform: rotateX(180deg);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 30px;
+  width: 100%;
+  overflow-x: scroll;
+  max-height: 670px;
+}
+
+.debates {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  width: 100%;
+}
+
+.pc {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .topic_item__head__wrapper {
+    padding: 16px 40px 16px 40px;
+  }
+
+  .topic_item__head__wrapper__topic {
+    font-size: 38px;
+    line-height: 50px;
+  }
+
+  .topic_item__container {
+    padding: 0 40px 230px 40px;
+  }
+
+  .topic_item__container__head h1 {
+    font-size: 56px;
+    line-height: 78px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .topic_item__head__wrapper {
+    padding: 20px 30px 20px 30px;
+  }
+
+  .topic_item__head__wrapper__topic {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .topic_item__container {
+    padding: 0 30px 230px 30px;
+  }
+
+  .topic_item__container__head h1 {
+    font-size: 52px;
+    line-height: 72px;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .topic_item__head__wrapper {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .topic_item__head__wrapper__topic {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .topic_item__container {
+    padding: 0 20px 230px 20px;
+  }
+
+  .topic_item__container__head h1 {
+    font-size: 46px;
+    line-height: 64px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .topic_item__head__wrapper {
+    padding: 20px 15px 20px 15px;
+  }
+
+  .topic_item__container {
+    padding: 0 15px 230px 15px;
+  }
+
+  .topic_item__container__head h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+}

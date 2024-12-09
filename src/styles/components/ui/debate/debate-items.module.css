@@ -1,0 +1,26 @@
+.debate_item_image {
+  border-radius: 0;
+}
+
+.debate_item_body {
+  transform: rotateX(180deg);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  width: 420px;
+}
+
+.debate_item_text_thin {
+  font-weight: lighter;
+  color: whitesmoke;
+  font-size: small;
+  opacity: .5;
+}
+
+.debate_item_text_with_image {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
